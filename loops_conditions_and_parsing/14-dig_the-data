@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 # This script describes number 13
-awk '{count[$2" "$3]++} END {for (i in count) print count[i], i}' access.log | sort -nr
+awk '{count[$2" "$3]++} END {for (i in count) printf "%d %s\n", count [i], i} access.log | sort -nr'
